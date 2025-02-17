@@ -18,20 +18,42 @@
   <!-- ファビコン -->
   <link rel="shortcut icon" href="" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!-- GoogleFont -->
   <!-- JavaScript -->
 </head>
 <body>
   <main>
-    <!-- テスト -->
-    <div class="test">
-      <p>テストテストテストテスト</p>
-    </div>
-    <div class="comment">
-      <p>テストテストテスト</p>
-    </div>
-  </main>
+
+    <!-- header -->
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="#">
+          <img src="./img/logo-r.svg" alt="" class="header__logo--img">
+        </a>
+      </h1>
+      <nav class="header__nav" id="nav">
+          <ul class="header__nav--list">
+              <li class="header__nav--item">
+                  <a href="#">BBBが選ばれる理由</a>
+              </li>
+              <li class="header__nav--item">
+                  <a href="#">受講生の声</a>
+              </li>
+              <li class="header__nav--item">
+                  <a href="#">スクールの概要</a>
+              </li>
+          </ul>
+      </nav>
+      <a href="#" class="button">無料体験に申し込む</a>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+  </main> 
 <!--jQuery-->
 </body>
 </html>

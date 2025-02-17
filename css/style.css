@@ -1,0 +1,257 @@
+/* A Modern CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  border-style: solid;
+  box-sizing: border-box;
+  border-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+input,
+button,
+select,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+input[type=submit],
+input[type=button],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  color: #000000;
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+}
+@media (max-width: 787px) {
+  html {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1.3194444444vw;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    transition: 0.2s ease-in-out;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+.header {
+  height: 100px;
+  padding: 40px 0 0 50px;
+}
+
+.header__logo--img {
+  width: 100px;
+}
+
+.hamburger {
+  width: 100px;
+  height: 100px;
+  background-color: #ff2a2a;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.hamburger span {
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 25px;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 36px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 64px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 47px;
+  left: 25px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 47px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.inner {
+  width: 100%;
+  padding-right: 1.4375rem;
+  padding-left: 1.4375rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: initial;
+    padding-right: initial;
+    padding-left: initial;
+  }
+}
+
+.test {
+  margin-top: 6.25rem;
+  background-color: rgb(19, 13, 19);
+  font-size: 1.25rem;
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .test {
+    font-size: 3.125rem;
+    color: green;
+  }
+}
+
+.comment {
+  margin-top: 6.25rem;
+  background-color: black;
+  font-size: 1rem;
+  color: red;
+}
+@media screen and (min-width: 768px) {
+  .comment {
+    font-size: 3.125rem;
+    color: green;
+  }
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+* {
+  color: #fff;
+  font-family: "Noto Serif JP", serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 16px;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+}/*# sourceMappingURL=style.css.map */
