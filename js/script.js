@@ -1,17 +1,37 @@
 // ハンバーガーメニュー
-jQuery(function ($) {
-  $('.js-hamburger').on('click', function(){
-    if($(this).hasClass('open')){
-      $('.js-drawer').fadeOut();
-      $(this).removeClass('open');
-      $('html').removeClass('fixed');
-    }else{
-      $('.js-drawer').fadeIn();
-      $(this).addClass('open');
-      $('html').addClass('fixed');
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  // ハンバーガーメニューのクリックイベント
+  document.querySelector('.hamburger').addEventListener('click', () => {
+    // ハンバーガーメニューの共通処理を呼び出す
+    hamburger();
+  });
+
+  // メニューのリンクをクリックした時
+  document.querySelectorAll('#nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      // ハンバーガーメニューの共通処理を呼び出す
+      hamburger(); 
+    });
   });
 });
+
+function hamburger() {
+  const hamburgerEl = document.querySelector('.hamburger');
+  const navEl = document.querySelector('#nav');
+
+  // activeクラスの切り替え
+  hamburgerEl.classList.toggle('active');
+
+  // ナビゲーションメニューの表示/非表示
+  if (hamburgerEl.classList.contains('active')) {
+    // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
+    navEl.classList.add('active');
+  } else {
+    // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
+    navEl.classList.remove('active');
+  }
+}
+
 // faqセクション
 //アコーディオンをクリックした時の動作
 jQuery(function ($) {
