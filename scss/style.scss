@@ -1,0 +1,21 @@
+// フォルダごと一括読み込み
+@use "base";    // baseフォルダ
+@use "global";  // globalフォルダ
+@use "module";  // moduleフォルダ
+@use "page";    // pageフォルダ
+@use "utility"; // utilityフォルダ
+
+.test {
+    margin-top: 100px;
+    background-color: rgb(19, 13, 19);
+    font-size: 20px;
+    color: red;
+    
+  }
+  .comment {
+    margin-top: 100px;
+    background-color:black;
+    font-size: 16px;
+    color: red;
+    
+  }

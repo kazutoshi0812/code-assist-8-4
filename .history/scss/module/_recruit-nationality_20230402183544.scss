@@ -1,0 +1,18 @@
+@use "../global" as *;
+.recruit-nationality{
+  margin-top:rem(50);
+  @include mq("md") {
+    margin-top:initial;
+    margin-top:rem(30);
+    // height:rem(500); 
+  }
+}
+.recruit-nationality img{
+  width: 100%;
+  @include mq("md") {
+    max-width: rem(1440);
+    height:100%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../global" as *;
+// pc版
+.trouble-pc{
+  @include mq(md){
+    margin:0 auto;
+  }
+}
+.trouble-pc img{
+  width: rem(987);
+  object-fit: cover;
+  max-width: 100%;
+  margin: 0 auto;
+}

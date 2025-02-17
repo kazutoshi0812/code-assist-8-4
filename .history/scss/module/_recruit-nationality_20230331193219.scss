@@ -1,0 +1,15 @@
+@use "../global" as *;
+.recruit-nationality{
+  margin-top:rem(50);
+  @include mq("md") {
+    margin-top:initial;
+    margin-top:rem(30);
+    // height:rem(500); 
+  }
+}
+.recruit-nationality img{
+  @include mq("md") {
+    height:100%;
+    object-fit: cover;
+  }
+}

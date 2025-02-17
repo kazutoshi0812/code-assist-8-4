@@ -1,0 +1,32 @@
+@use "../global" as *;
+.recruit-type{
+  text-align: center;
+  margin-top:rem(-25);
+  padding-left:rem(15);
+  padding-right:rem(15);
+  position:relative;
+  @include mq("md") {
+    margin-top:rem(100);
+    padding-left:initial;
+    padding-right:initial;
+  }
+}
+.recruit-type__items-image{
+  margin-top:rem(-48);
+  text-align: center;
+  @include mq("md") {
+    margin-top:rem(60);
+    width:100%;
+  }
+}
+.recruit-type__items-image{
+  width:100%;
+  object-fit:cover;
+}
+.recruit-type__items-caution1{
+  @include mq("md") {
+    position:absolute;
+    margin-top:-27%;
+    right:-1%;
+  }
+}

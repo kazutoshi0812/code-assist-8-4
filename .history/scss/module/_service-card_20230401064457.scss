@@ -1,0 +1,79 @@
+@use "../global" as *;
+/* カード */
+.service-card__item{
+  background-color: $white;
+}
+.service-card__item-image{
+ position:relative;
+ width:100%;
+}
+.service-card__item-image::before{
+  content:'';
+  display:block;
+  // padding-top: 57.14%;
+  padding-top:65%;
+  @include mq(md){
+    padding-top:65%;
+  }
+}
+.service-card__item-image img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+.service-card__item-content{
+  padding:rem(10) rem(10) rem(25) rem(10);
+  @include mq(md){
+    padding:rem(12) rem(12) rem(30) rem(12);
+  } 
+}
+.service-card__item-content h4{
+  text-align: center;
+  font-family: $base-font;
+  font-size:rem(26);
+  font-weight:$medium;
+  line-height:calc(31 / 26);
+  color:$main-accentstrong;
+  padding-bottom:rem(5);
+  border-bottom: rem(1.5) solid $main-accentstrong;
+  position: relative;
+  display: inline-block;
+  left:50%;
+  transform: translateX(-50%);
+  margin-top:rem(5);
+  @include mq(md){
+    margin-top:rem(5);
+    font-size:rem(30);
+    line-height:calc(45 / 30);
+  } 
+}
+.service-card__item-content h4::before {
+  content: "";
+  position: absolute;
+  bottom:rem(3);
+  left: 0;
+  width: 100%;
+  height:rem(3);
+  background-color: white;
+  border-bottom: rem(1.5) solid $main-accentstrong;
+}
+
+.service-card__item-content p{
+  font-family: $base-font;
+  font-size:rem(18);
+  margin-top:rem(18);
+  line-height:calc(26 / 18);
+  color:$mono-color;
+  font-weight:$regular;
+  @include mq(md){
+    font-size:rem(25);
+    font-weight:$regular;
+    line-height:calc(35 / 25);
+    margin-top:rem(28);
+    letter-spacing: rem(-1.5);
+  } 
+}
