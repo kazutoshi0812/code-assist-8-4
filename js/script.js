@@ -32,6 +32,34 @@ function hamburger() {
   }
 }
 
+// メインビジュアルのスライドショー
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.main-visual__images--item');
+  let currentSlide = 0;
+  
+  function showSlide(index) {
+    // 全てのスライドを非表示にする
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+    
+    // 指定されたスライドを表示
+    slides[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+    showSlide(currentSlide);
+  }
+
+  // 5秒ごとにスライドを切り替え
+  setInterval(nextSlide, 5000);
+});
+
+
 // faqセクション
 //アコーディオンをクリックした時の動作
 jQuery(function ($) {
