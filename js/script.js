@@ -1,17 +1,15 @@
 // ハンバーガーメニュー
-document.addEventListener('DOMContentLoaded', () => {
+$(function() {
   // ハンバーガーメニューのクリックイベント
-  document.querySelector('.hamburger').addEventListener('click', () => {
+  $('.hamburger').on('click', function() {
     // ハンバーガーメニューの共通処理を呼び出す
     hamburger();
   });
 
   // メニューのリンクをクリックした時
-  document.querySelectorAll('#nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      // ハンバーガーメニューの共通処理を呼び出す
-      hamburger(); 
-    });
+  $('#nav a').on('click', function() {
+    // ハンバーガーメニューの共通処理を呼び出す
+    hamburger();
   });
 });
 
@@ -60,36 +58,27 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// faqセクション
-//アコーディオンをクリックした時の動作
-jQuery(function ($) {
-$('.faq__accordion-area-q').on('click', function() {//タイトル要素をクリックしたら
-  $('.faq__accordion-area-a').slideUp(500);//クラス名.boxがついたすべてのアコーディオンを閉じる
-    
-  var findElm = $(this).next(".faq__accordion-area-a");//タイトル直後のアコーディオンを行うエリアを取得
-    
-  if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
-    $(this).removeClass('close');//クラス名を除去    
-  }else{//それ以外は
-    $('.close').removeClass('close'); //クラス名closeを全て除去した後
-    $(this).addClass('close');//クリックしたタイトルにクラス名closeを付与し
-    $(findElm).slideDown(500);//アコーディオンを開く
-  }
-});
-});
 // スクロールでフェイドインする
 $(function () {
   $(window).scroll(function () {
-      const wHeight = $(window).height();
-      const scrollAmount = $(window).scrollTop();
-      $('.scrollanime').each(function () {
-          const targetPosition = $(this).offset().top;
-          if(scrollAmount > targetPosition - wHeight + 60) {
-              $(this).addClass("fadeInDown");
-          }
-      });
+    const wHeight = $(window).height();
+    const scrollAmount = $(window).scrollTop();
+
+    // .reason__inner--slide-left要素に対する処理
+    $('.reason__inner--slide-left, .reason__inner--slide-right').each(function () {
+      const targetPosition = $(this).offset().top;
+      if (scrollAmount > targetPosition - wHeight + 60) {
+        if (!$(this).hasClass("fadeIn")) {
+          $(this).addClass("fadeIn");
+        }
+      } else {
+        $(this).removeClass("fadeIn");
+      }
+    });
   });
 });
+
+
 // 各セクションへスムーススクロール
 $(function(){
   // #で始まるアンカーをクリックした場合に処理
@@ -130,3 +119,21 @@ $(function(){
     return false;
   });
   })
+
+  // faqセクション
+//アコーディオンをクリックした時の動作
+// jQuery(function ($) {
+// $('.faq__accordion-area-q').on('click', function() {//タイトル要素をクリックしたら
+//   $('.faq__accordion-area-a').slideUp(500);//クラス名.boxがついたすべてのアコーディオンを閉じる
+    
+//   var findElm = $(this).next(".faq__accordion-area-a");//タイトル直後のアコーディオンを行うエリアを取得
+    
+//   if($(this).hasClass('close')){//タイトル要素にクラス名closeがあれば
+//     $(this).removeClass('close');//クラス名を除去    
+//   }else{//それ以外は
+//     $('.close').removeClass('close'); //クラス名closeを全て除去した後
+//     $(this).addClass('close');//クリックしたタイトルにクラス名closeを付与し
+//     $(findElm).slideDown(500);//アコーディオンを開く
+//   }
+// });
+// });
