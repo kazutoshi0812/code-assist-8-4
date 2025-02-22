@@ -64,8 +64,12 @@ $(function () {
     const wHeight = $(window).height();
     const scrollAmount = $(window).scrollTop();
 
-    // .reason__inner--slide-left要素に対する処理
-    $('.reason__inner--slide-left, .reason__inner--slide-right').each(function () {
+    // .reason__inner--slide-left要素と.voice--inner-left要素に対する処理
+    $(
+      `.reason__inner--slide-left,
+       .reason__inner--slide-right,
+       .voice--inner-left,
+       .voice--inner-right`).each(function () {
       const targetPosition = $(this).offset().top;
       if (scrollAmount > targetPosition - wHeight + 60) {
         if (!$(this).hasClass("fadeIn")) {

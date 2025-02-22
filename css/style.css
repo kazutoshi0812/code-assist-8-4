@@ -477,26 +477,26 @@ main {
 
 /* アニメーションスタイル */
 /* ---------------------------- */
-/* アニメーション前 */
-.reason__inner--slide-left {
+/* フェードインアニメーション前 */
+.voice--inner-left {
   transform: translateX(-80px);
   opacity: 0;
 }
 
 /* トリガー発火でfadeInを付与 */
-.reason__inner--slide-left.fadeIn {
+.voice--inner-left.fadeIn {
   transition: 0.8s;
   transform: translateX(0);
   opacity: 1;
 }
 
-.reason__inner--slide-right {
+.voice--inner-right {
   transform: translateX(80px);
   opacity: 0;
 }
 
 /* トリガー発火でfadeInを付与 */
-.reason__inner--slide-right.fadeIn {
+.voice--inner-right.fadeIn {
   transition: 0.8s;
   transform: translateX(0);
   opacity: 1;
@@ -521,6 +521,106 @@ main {
 
 .inner--text {
   color: #333;
+}
+
+.section__voice--wrapper {
+  max-width: 860px;
+  margin: 0 auto 120px;
+}
+
+.student {
+  display: flex;
+}
+
+.voice--inner-left,
+.voice--inner-right {
+  display: flex;
+}
+
+.voice--inner-right {
+  flex-direction: row-reverse;
+  margin: 60px 0;
+}
+
+.student_introduction {
+  text-align: center;
+}
+
+.voice--student {
+  background-color: #9c9898;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.students--name,
+.students--occupation {
+  color: #333;
+  text-align: center;
+}
+
+.section__voice--text,
+.section__voice--text-right {
+  width: 60%;
+  height: 136px;
+  padding: 20px;
+  background-color: #e9f1fb;
+  position: relative;
+  border-radius: 15px;
+  margin-left: 25px;
+  align-content: center;
+}
+
+.section__voice--text::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  margin-left: -30px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e9f1fb;
+}
+
+.section__voice--text-right::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 0;
+  margin-right: -30px;
+  border: 15px solid transparent;
+  border-left: 15px solid #e9f1fb;
+}
+
+.section__voice--text-right {
+  margin: 0 25px 0 0;
+}
+
+.voice--text {
+  color: #333;
+}
+
+/* フェードインアニメーション前 */
+.reason__inner--slide-left {
+  transform: translateX(-80px);
+  opacity: 0;
+}
+
+/* トリガー発火でfadeInを付与 */
+.reason__inner--slide-left.fadeIn {
+  transition: 0.8s;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reason__inner--slide-right {
+  transform: translateX(80px);
+  opacity: 0;
+}
+
+/* トリガー発火でfadeInを付与 */
+.reason__inner--slide-right.fadeIn {
+  transition: 0.8s;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .u-desktop {
