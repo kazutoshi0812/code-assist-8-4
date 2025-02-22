@@ -289,3 +289,50 @@
     transform: translateX(0);
     opacity: 1;
 }
+
+// summary
+.section__summary {
+    height: 859px;
+    background-image: url(/img/bg.gif);
+    animation: fall 10s infinite linear;
+    padding: 60px 0;
+    margin-bottom: 120px;
+}
+@keyframes fall {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -700px 700px;
+    }
+}
+
+.summary__wrapper {
+    display: flex;
+    justify-content: center;
+}
+.summary__list {
+    max-width: 860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+.summary__list li {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 60px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.summary__list--sub-title {
+    margin: 15px 0 30px;
+}
+.summary__list--title,
+.summary__list--sub-title,
+.summary__item--text {
+    color: #333;
+}
+
+
+
