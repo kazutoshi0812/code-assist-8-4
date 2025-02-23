@@ -1,1 +1,28 @@
 @use "../global" as *;
+
+.footer {
+    background-color: #e8e8e8;
+    padding: 60px 0 20px 0;
+}
+.footer__wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 860px;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer__list--item a {
+    font-size: 0.75rem;
+}
+.footer__list--title {
+    font-weight: bold;
+}
+.footer__list {
+    width: 50%;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: 0.625rem;
+}
