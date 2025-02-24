@@ -117,7 +117,7 @@ main {
 }
 
 /* ヘッダー */
-header {
+.header {
   display: flex;
   position: fixed;
   background-color: #fff;
@@ -128,24 +128,24 @@ header {
   padding: 20px 40px;
 }
 
-header h1 {
+.header h1 {
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-header h1 a {
+.header h1 a {
   display: flex;
   align-items: center;
 }
 
-.header-logo img {
+.header__logo img {
   font-family: "Hiragino Kaku Gothic ProN";
   color: #000;
 }
 
 /* ナビゲーション */
-#header-nav {
+.header__nav {
   position: fixed;
   top: 0;
   left: -120%;
@@ -157,29 +157,30 @@ header h1 a {
   z-index: 999;
 }
 
-#header-nav.is-active {
+.header__nav.is-active {
   left: 0;
   opacity: 1;
 }
 
-nav li a {
+.header__nav--item a {
   color: #fff;
 }
 
-.header-navlist {
+.header__nav--list {
   margin-bottom: 60px;
   border-top: 1px solid #fff;
 }
 
-.header-navlist li {
+.header__nav--item {
   position: relative;
   margin: 0;
   padding: 20px 0;
   border-bottom: solid 1px #fff;
 }
 
-.header-snslist li {
+.header__sns--item {
   padding: 5px 0;
+  color: #FFF;
 }
 
 #mask {
@@ -201,7 +202,7 @@ nav li a {
 }
 
 /* バーガーメニュー */
-.header-burger {
+.header__burger {
   display: block;
   position: fixed;
   top: 25px;
@@ -212,7 +213,7 @@ nav li a {
   z-index: 999;
 }
 
-.header-burger span {
+.header__burger span {
   display: block;
   position: absolute;
   left: 0;
@@ -223,33 +224,33 @@ nav li a {
   transition: all 0.5s;
 }
 
-.header-burger span:nth-child(1) {
+.header__burger span:nth-child(1) {
   top: 4px;
 }
 
-.header-burger span:nth-child(2) {
+.header__burger span:nth-child(2) {
   top: 14px;
 }
 
-.header-burger span:nth-child(3) {
+.header__burger span:nth-child(3) {
   top: 24px;
 }
 
-.header-burger.active span:nth-child(1) {
+.header__burger.active span:nth-child(1) {
   transform: translateY(6px) rotate(-45deg);
   top: 8px;
 }
 
-.header-burger.active span:nth-child(2) {
+.header__burger.active span:nth-child(2) {
   opacity: 0;
 }
 
-.header-burger.active span:nth-child(3) {
+.header__burger.active span:nth-child(3) {
   transform: translateY(-6px) rotate(45deg);
   top: 20px;
 }
 
-.header-burger.active span {
+.header__burger.active span {
   background-color: #fff;
   z-index: 999;
 }

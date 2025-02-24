@@ -6,22 +6,34 @@ window.onload = function() {
 
 // ハンバーガーメニュー
 $(function() {
-  // ハンバーガーメニューのクリックイベント
-  $('.hamburger').on('click', function() {
-    // ハンバーガーメニューの共通処理を呼び出す
-    hamburger();
+   // ハンバーガーメニュー
+    $(".header__burger").click(function(){
+    $(this).toggleClass('active');
+    $(".header__nav").toggleClass('is-active');
+    $("#mask").toggleClass('open');
   });
+  // // ハンバーガーメニューのクリックイベント
+  // $('.header__burger').on('click', function() {
+  //   // ハンバーガーメニューの共通処理を呼び出す
+  //   hamburger();
+  // });
 
-  // メニューのリンクをクリックした時
-  $('#nav a').on('click', function() {
-    // ハンバーガーメニューの共通処理を呼び出す
-    hamburger();
+  // // メニューのリンクをクリックした時
+  // $('header__nav--item a').on('click', function() {
+  //   // ハンバーガーメニューの共通処理を呼び出す
+  //   hamburger();
+  // });
+  // リンク、ボタンをクリックしたらクラス除去
+  $(".header__nav--item a").click(function(){
+    $(".header__burger").removeClass('active');
+    $(".header__nav").removeClass('is-active');
+    $("#mask").removeClass('open');
   });
 });
 
 function hamburger() {
-  const hamburgerEl = document.querySelector('.hamburger');
-  const navEl = document.querySelector('#nav');
+  const hamburgerEl = document.querySelector('.header__burger');
+  const navEl = document.querySelector('.header__nav');
 
   // activeクラスの切り替え
   hamburgerEl.classList.toggle('active');
