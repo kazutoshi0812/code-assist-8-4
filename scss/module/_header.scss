@@ -21,12 +21,12 @@
     transition: 0.3s;
 }
 .hamburger:hover {
-opacity: 0.7;
+    opacity: 0.7;
 }
 
 .hamburger span {
     width: 50px;
-    height: 2px ;
+    height: 2px;
     background: #fff;
     position: absolute;
     left: 25px;
@@ -34,26 +34,26 @@ opacity: 0.7;
 }
 
 .hamburger span:nth-child(1) {
-top: 36px;
+    top: 36px;
 }
 .hamburger span:nth-child(2) {
-top: 50px;
+    top: 50px;
 }
 .hamburger span:nth-child(3) {
-top: 64px;
+    top: 64px;
 }
 
 .hamburger.active span:nth-child(1) {
-top: 47px;
-left: 25px;
-background :#fff;
-transform: rotate(-45deg);
+    top: 47px;
+    left: 25px;
+    background: #fff;
+    transform: rotate(-45deg);
 }
 .hamburger.active span:nth-child(2),
 .hamburger.active span:nth-child(3) {
-top: 47px;
-background: #fff;
-transform: rotate(45deg);
+    top: 47px;
+    background: #fff;
+    transform: rotate(45deg);
 }
 
 .header__nav {
@@ -82,7 +82,7 @@ transform: rotate(45deg);
     left: 50px;
 }
 .header__nav .header__nav--list {
-    margin: 80px 0 40px 0;
+    margin: 110px 0 40px 0;
 }
 .header__nav .header__nav--list li {
     margin-bottom: 20px;
@@ -117,4 +117,56 @@ transform: rotate(45deg);
 .header__nav--button:hover {
     background-color: #fff;
     color: #ff2a2a;
+}
+
+// responsive
+@media(max-width: 1023px) {
+    .hamburger {
+        width: 80px;
+        height: 80px;
+    }
+    .hamburger span {
+        width: 40px;
+        left: 20px;
+    }
+    .hamburger span:nth-child(1) {
+        top: 29px;
+    }
+    .hamburger span:nth-child(2) {
+        top: 40px;
+    }
+    .hamburger span:nth-child(3) {
+        top: 51px;
+    }
+    .hamburger.active span:nth-child(1),
+    .hamburger.active span:nth-child(2),
+    .hamburger.active span:nth-child(3) {
+        top: 38px;
+    }
+    .hamburger.active span:nth-child(1) {
+        left: 20px;
+    }
+    
+    .header__nav .nav--logo {
+        width: 80px;
+        top: 32px;
+        left: 40px;
+    }
+    .header__nav .header__nav--list {
+        margin: 110px 0 32px 0;
+    }
+    .header__nav .header__nav--list li {
+        margin-bottom: 16px;
+    }
+    
+    .header__nav--button {
+        width: 200px;
+        padding: 12px 0;
+    }
+    .header__nav--button::after {
+        width: 200px;
+        padding: 12px 0;
+        right: -5px;
+        bottom: -5px;
+    }
 }
