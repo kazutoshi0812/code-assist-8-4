@@ -1,172 +1,135 @@
 @use "../global" as *;
 
-.header {
-    height: 100px;
-    padding: 40px 0 0 50px;
-}
-.header__logo--img {
-    width: 100px;
-}
-
-// hamburger
-.hamburger {
-    width: 100px;
-    height: 100px;
-    background-color: #ff2a2a;
+/* ヘッダー */
+header {
+    display: flex;
     position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 30;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.hamburger:hover {
-    opacity: 0.7;
-}
-
-.hamburger span {
-    width: 50px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    left: 25px;
-    transition: 0.3s ease-in-out;
-}
-
-.hamburger span:nth-child(1) {
-    top: 36px;
-}
-.hamburger span:nth-child(2) {
-    top: 50px;
-}
-.hamburger span:nth-child(3) {
-    top: 64px;
-}
-
-.hamburger.active span:nth-child(1) {
-    top: 47px;
-    left: 25px;
-    background: #fff;
-    transform: rotate(-45deg);
-}
-.hamburger.active span:nth-child(2),
-.hamburger.active span:nth-child(3) {
-    top: 47px;
-    background: #fff;
-    transform: rotate(45deg);
-}
-
-.header__nav {
+    background-color: #fff;
+    justify-content: space-between;
+    z-index: 99;
     width: 100%;
+    height: 70px;
+    padding: 20px 40px;
+}
+header h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+header h1 a {
+    display: flex;
+    align-items: center;
+}
+.header-logo img {
+    font-family: "Hiragino Kaku Gothic ProN";
+    color: #000;
+}
+
+/* ナビゲーション */
+#header-nav {
+    position:fixed;
+    top:0;
+    left: -120%;
+    width: 300px;;
     height: 100vh;
-    background-color: #ff2a2a;
+    padding: 60px 25px;
+    background:#121212;
+    transition: all 0.6s;
+    z-index: 999;
+}
+#header-nav.is-active {
+    left: 0;
+    opacity: 1;
+}
+nav li a {
     color: #fff;
+}
+.header-navlist {
+    margin-bottom: 60px;
+    border-top: 1px solid #fff;
+}
+.header-navlist li {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: solid 1px #fff;
+}
+.header-snslist li {
+    padding: 5px 0;
+}
+
+#mask {
+    display: none;
+    transition: all .5s;
+}
+#mask.open {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 20;
-    opacity: 0;
-    text-align: center;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
 }
 
-.header__nav.active {
-    opacity: 1;
-    visibility: visible;
-}
-.header__nav .nav--logo {
-    width: 100px;
-    position: absolute;
-    top: 40px;
-    left: 50px;
-}
-.header__nav .header__nav--list {
-    margin: 110px 0 40px 0;
-}
-.header__nav .header__nav--list li {
-    margin-bottom: 20px;
-}
-.header__nav .header__nav--list a {
-    color: #fff;
-    font-weight: bold;
-}
-
-// navigation内のボタン
-.header__nav--button {
-    width: 250px;
-    border: solid 1px #fff;
-    color: #fff;
+/* バーガーメニュー */
+.header-burger {
     display: block;
-    font-weight: bold;
-    padding: 15px 0;
-    margin: 0 auto;
-    position: relative;
-    transition: 0.3s ease-in-out;
+    position: fixed;
+    top: 25px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    z-index: 999;
 }
-.header__nav--button::after {
-    content: "";
-    width: 250px;
-    border-right: solid 1px #fff;
-    border-bottom: solid 1px #fff;
-    padding: 15px 0;
+.header-burger span {
+    display: block;
     position: absolute;
-    right: -6px;
-    bottom: -6px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all .5s;
 }
-.header__nav--button:hover {
+.header-burger span:nth-child(1) {
+    top: 4px;
+}
+.header-burger span:nth-child(2) {
+    top: 14px;
+}
+.header-burger span:nth-child(3) {
+    top: 24px;
+}
+.header-burger.active span:nth-child(1) {
+    transform: translateY(6px) rotate(-45deg);
+    top: 8px;
+}
+.header-burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.header-burger.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(45deg);
+    top: 20px;
+}
+.header-burger.active span {
     background-color: #fff;
-    color: #ff2a2a;
+    z-index: 999;
 }
 
-// responsive
-@media(max-width: 1023px) {
-    .hamburger {
-        width: 80px;
-        height: 80px;
-    }
-    .hamburger span {
-        width: 40px;
-        left: 20px;
-    }
-    .hamburger span:nth-child(1) {
-        top: 29px;
-    }
-    .hamburger span:nth-child(2) {
-        top: 40px;
-    }
-    .hamburger span:nth-child(3) {
-        top: 51px;
-    }
-    .hamburger.active span:nth-child(1),
-    .hamburger.active span:nth-child(2),
-    .hamburger.active span:nth-child(3) {
-        top: 38px;
-    }
-    .hamburger.active span:nth-child(1) {
-        left: 20px;
-    }
-    
-    .header__nav .nav--logo {
-        width: 80px;
-        top: 32px;
-        left: 40px;
-    }
-    .header__nav .header__nav--list {
-        margin: 110px 0 32px 0;
-    }
-    .header__nav .header__nav--list li {
-        margin-bottom: 16px;
-    }
-    
-    .header__nav--button {
-        width: 200px;
-        padding: 12px 0;
-    }
-    .header__nav--button::after {
-        width: 200px;
-        padding: 12px 0;
-        right: -5px;
-        bottom: -5px;
+.main-video video {
+    width: 100%;
+    max-height: 960px;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+    .main-video video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
     }
 }
