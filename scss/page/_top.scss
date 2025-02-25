@@ -1,163 +1,37 @@
 @use "../global" as *;
 
-// メインビジュアル
-.main-visual__wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    position: relative;
-    padding: 50px 0;
-}
-.main-visual__image {
-    width: 50%;
-}
-.main-visual__text-area {
-    width: 50%;
-    max-width: 550px;
-    padding: 0 60px 0 30px;
-}
-.main-visual__title {
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 2.5rem;
-}
-.section__main-visual {
-    height: 720px;
-    position: relative;
-    margin-bottom: 120px;
-}
-.main-visual__wrapper .main-visual__text-area {
-    position: absolute;
-    top: 280px;
-    left: 10%;
-    z-index: 10;
-}
-.main-visual__title {
-    color: #333;
-    font-size: 2.875rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-shadow: 0 4px 6px #fff;
-}
-.main-visual--button {
-    background-color: #ff2a2a;
-    border-bottom: 6px solid #9a0413;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 1.5rem;
-    display: block;
-    padding: 15px 35px;
-    text-align: center;
-    transition: 0.3s;
-    position: relative;
-}
-.main-visual--button::after {
-    content: "";
-    width: 16px;
-    height: 16px;
-    border-top: solid 3px #fff;
-    border-right: solid 3px #fff;
-    transform: rotate(45deg);
-    position: absolute;
-    top: 26px;
-    right: 30px;
-}
-
-.main-visual--button:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-.main-visual__images--list li {
-    width: 75%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-    animation: fade 15s infinite;
-}
-.main-visual__images--list li:nth-child(1) {
-    animation-delay: 0s;
-}
-.main-visual__images--list li:nth-child(2) {
-    animation-delay: 5s;
-}
-.main-visual__images--list li:nth-child(3) {
-    animation-delay: 10s;
-}
-.main-visual__images--list li img {
+/* ピックアップセクション */
+.section__pickup {
     width: 100%;
-    height: 720px;
-    object-fit: cover;
+    padding: 100px 0 110px 0;
 }
-.main-visual__images--list li::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: inset 0px 0px 20px 20px #fff;
+@media screen and (max-width: 768px) {
+    .section__pickup {
+        padding: 50px 0;
+    }
 }
-
-// main visual responsive
-@media (max-width: 1023px) {
-    .main-visual__wrapper {
-        display: block;
-        padding: 30px 0 20px;
-    }
-    .main-visual__image {
-        width: 100%;
-    }
-    .main-visual__text-area {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 20px;
-    }
-    .section__main-visual {
-        height: auto;
-        margin-bottom: 60px;
-    }
-    .main-visual__wrapper .main-visual__text-area {
-        position: static;
-        margin-top: 400px;
-    }
-    .main-visual__title {
-        font-size: 1.75rem;
-        text-align: start;
-    }
-    .main-visual--button {
-        font-size: 1.25rem;
-        padding: 12px 30px;
-    }
-    .main-visual--button::after {
-        top: 20px;
-    }
-    .main-visual__images--list li {
-        width: 100%;
-    }
-    .main-visual__images--list li img {
-        height: 400px;
-    }
+.section__title {
+    font-size: 2.25rem;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+.slick__slider--item {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+}
+.slick__slider--img {
+    display: block;
+    padding: 0 30px;
+    max-width: 100%;
+}
+// .slick__slider {
+//     visibility: hidden;
+// }
+.slick__slider.slick-initialized {
+    visibility: visible;
 }
 
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    15% {
-        opacity: 1;
-    }
-    30% {
-        opacity: 1;
-    }
-    45% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
 
 // reason
 .section__reason {
