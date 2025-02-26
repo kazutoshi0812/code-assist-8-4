@@ -80,3 +80,74 @@
 }
 
 
+/* section contact */
+.section__contact {
+    background-color: #121212;
+    color: #fff;
+    padding: 50px 0;
+}
+.section__contact > .section__title {
+    color: #fff;
+}
+.contact__info, .contact--form {
+    width: 45%;
+}
+.contact__info--text {
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+.section__contact--contents {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contact__form {
+    width: 45%;
+}
+.contact__form input,
+.contact__form textarea {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+.contact__form dt > label {
+    color: #fff;
+}
+.contact__form dd {
+    margin: 0 0 20px 0;
+}
+.contact__form dd > input,
+.contact__form dd > textarea {
+    background-color: #fff;
+}
+.button {
+    width: 200px;
+}
+.button > input {
+    background-color: #121212;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 12px 0;
+    transition: all .3s ease-in-out;
+}
+.button input:hover {
+    width: 200px;
+    background-color: #fff;
+    color: #121212;
+}
+@media screen and (max-width: 768px) {
+    .section__contact--contents {
+        flex-direction: column;
+    }
+    .contact__info,
+    .contact__form,
+    .contact__form .button input {
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

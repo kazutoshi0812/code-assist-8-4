@@ -211,6 +211,7 @@ main {
   height: 30px;
   transition: all 0.5s;
   z-index: 999;
+  cursor: pointer;
 }
 
 .header__burger span {
@@ -270,51 +271,18 @@ main {
        object-fit: cover;
   }
 }
+/* フッター */
 .footer {
-  background-color: #e8e8e8;
-  padding: 60px 0 20px 0;
-}
-
-.footer__wrapper {
-  display: flex;
-  justify-content: center;
-  max-width: 860px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.footer__list--item a {
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
   font-size: 0.75rem;
 }
 
-.footer__list--title {
-  font-weight: bold;
+.footer > p {
+  color: #fff;
 }
 
-.footer__list {
-  width: 50%;
-}
-
-.footer__list--menu {
-  margin-left: 10px;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  font-size: 0.625rem;
-}
-
-@media (max-width: 1023px) {
-  .footer {
-    padding: 60px 16px 20px;
-  }
-  .footer__wrapper {
-    flex-wrap: wrap;
-    gap: 30px 0;
-  }
-}
 .inner {
   width: 100%;
   padding-right: 1.4375rem;
@@ -331,26 +299,13 @@ main {
 }
 
 .section--title {
-  color: #333;
+  color: #121212;
   font-size: 2.25rem;
   font-weight: bold;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-bottom: 100px;
   text-align: center;
   position: relative;
-}
-
-.section--title::after {
-  content: "";
-  width: 100px;
-  height: 3px;
-  background-color: #333;
-  display: block;
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 }
 
 @media (max-width: 1023px) {
@@ -441,6 +396,90 @@ main {
 @media screen and (max-width: 768px) {
   .section__feature--cards {
     margin: 0;
+  }
+}
+/* section contact */
+.section__contact {
+  background-color: #121212;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.section__contact > .section__title {
+  color: #fff;
+}
+
+.contact__info, .contact--form {
+  width: 45%;
+}
+
+.contact__info--text {
+  color: #fff;
+  margin: 0 0 30px 0;
+}
+
+.section__contact--contents {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__form {
+  width: 45%;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.contact__form dt > label {
+  color: #fff;
+}
+
+.contact__form dd {
+  margin: 0 0 20px 0;
+}
+
+.contact__form dd > input,
+.contact__form dd > textarea {
+  background-color: #fff;
+}
+
+.button {
+  width: 200px;
+}
+
+.button > input {
+  background-color: #121212;
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 12px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.button input:hover {
+  width: 200px;
+  background-color: #fff;
+  color: #121212;
+}
+
+@media screen and (max-width: 768px) {
+  .section__contact--contents {
+    flex-direction: column;
+  }
+  .contact__info,
+  .contact__form,
+  .contact__form .button input {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .u-desktop {

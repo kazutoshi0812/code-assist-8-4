@@ -1,41 +1,12 @@
 @use "../global" as *;
 
+/* フッター */
 .footer {
-    background-color: #e8e8e8;
-    padding: 60px 0 20px 0;
-}
-.footer__wrapper {
-    display: flex;
-    justify-content: center;
-    max-width: 860px;
-    width: 100%;
-    margin: 0 auto;
-}
-.footer__list--item a {
+    background-color: #121212;
+    text-align: center;
+    padding: 10px;
     font-size: 0.75rem;
 }
-.footer__list--title {
-    font-weight: bold;
-}
-.footer__list {
-    width: 50%;
-}
-.footer__list--menu {
-    margin-left: 10px;
-}
-.copyright {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    font-size: 0.625rem;
-}
-
-@media (max-width : 1023px) {
-    .footer {
-        padding: 60px 16px 20px;
-    }
-    .footer__wrapper {
-        flex-wrap: wrap;
-        gap: 30px 0;
-    }
+.footer > p {
+    color: #fff;
 }

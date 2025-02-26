@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!-- meta情報 -->
-  <title>code assist 8-4 上級編</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- ogp -->
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <!-- ファビコン -->
-  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-  <!-- css -->
-  <link rel="stylesheet" href="./css/style.css">
-  <!-- GoogleFont -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<!-- meta情報 -->
+<title>code assist 8-4 上級編</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- ogp -->
+<meta property="og:title" content="">
+<meta property="og:type" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+<!-- ファビコン -->
+<link rel="icon" href="./img/favicon.ico">
+<!-- css -->
+<link rel="stylesheet" href="./css/style.css">
+<!-- GoogleFont -->
 </head>
 <body>
-  <!-- header -->
-  <header class="header">
+<!-- header -->
+<header class="header">
     <h1 class="header__logo">
         <a href="index.html">
             <img src="./img/logo.svg" alt="Sneakers">
@@ -61,258 +61,177 @@
         <span></span>
     </div>
     <div id="mask"></div>
-  </header>
+</header>
 
-  <div class="main-video">
+<div class="main-video">
     <video src="./videos/video.mp4" loop autoplay muted playsinline></video>
-  </div>
+</div>
 
-  <main>
+<main>
     <!-- ピックアップセクション -->
     <section class="section__pickup" id="pickup">
-      <h2 class="section__title">
-          PICK UP
-      </h2>
-      <div class="slick__slider">
-          <ul class="slick__slider--list">
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup1.jpg" alt="スライド画像1">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup2.jpg" alt="スライド画像2">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup3.jpg" alt="スライド画像3">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup4.jpg" alt="スライド画像4">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup5.jpg" alt="スライド画像5">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup6.jpg" alt="スライド画像6">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup7.jpg" alt="スライド画像7">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup8.jpg" alt="スライド画像8">
-              </li>
-              <li class="slick__slider--item">
-                  <img class="slick__slider--img" src="./img/pickup9.jpg" alt="スライド画像9">
-              </li>
-          </ul>
-      </div>
-  </section>
+    <h2 class="section__title">
+        PICK UP
+    </h2>
+    <div class="slick__slider">
+        <ul class="slick__slider--list">
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup1.jpg" alt="スライド画像1">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup2.jpg" alt="スライド画像2">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup3.jpg" alt="スライド画像3">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup4.jpg" alt="スライド画像4">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup5.jpg" alt="スライド画像5">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup6.jpg" alt="スライド画像6">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup7.jpg" alt="スライド画像7">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup8.jpg" alt="スライド画像8">
+            </li>
+            <li class="slick__slider--item">
+                <img class="slick__slider--img" src="./img/pickup9.jpg" alt="スライド画像9">
+            </li>
+        </ul>
+    </div>
+</section>
 
     <!-- feature section -->
     <section class="section__feature" id="feature">
-      <h2 class="section__title">
-          FEATURE
-      </h2>
-      <div class="section__feature--cards">
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature1.jpg" alt="フューチャー画像1">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature2.jpg" alt="フューチャー画像2">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature3.jpg" alt="フューチャー画像3">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature4.jpg" alt="フューチャー画像4">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature5.jpg" alt="フューチャー画像5">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature6.jpg" alt="フューチャー画像6">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature7.jpg" alt="フューチャー画像7">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature8.jpg" alt="フューチャー画像8">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-          <div class="feature__cards--item">
-              <img class="feature__cards--image" src="./img/feature9.jpg" alt="フューチャー画像9">
-              <div class="cards__item--wrapper">
-                  <p class="cards__item--headline">category</p>
-                  <p class="cards__item--description">Text text text text text text text text text text text</p>
-                  <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
-              </div>
-          </div>
-      </div>
-    </section>
-
-    <section class="section__voice" id="voice">
-      <h2 class="section--title">受験生の声</h2>
-      <div class="section__voice--wrapper">
-        <article class="voice--inner-left">
-          <div class="student_introduction">
-              <img src="./img/icon-student1.png" alt="生徒の画像" class="voice--student">
-              <p class="students--name">○○○さん</p>
-              <p class="students--occupation">大学生</p>
-          </div>
-          <div class="section__voice--text">
-            <p class="voice--text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
+    <h2 class="section__title">
+        FEATURE
+    </h2>
+    <div class="section__feature--cards">
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature1.jpg" alt="フューチャー画像1">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
         </article>
-        <article class="voice--inner-right">
-          <div class="student_introduction">
-              <img src="./img/icon-student1.png" alt="生徒の画像" class="voice--student">
-              <p class="students--name">○○○さん</p>
-              <p class="students--occupation">会社員</p>
-          </div>
-          <div class="section__voice--text-right">
-            <p class="voice--text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature2.jpg" alt="フューチャー画像2">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
         </article>
-        <article class="voice--inner-left">
-          <div class="student_introduction">
-              <img src="./img/icon-student1.png" alt="生徒の画像" class="voice--student">
-              <p class="students--name">○○○さん</p>
-              <p class="students--occupation">自営業</p>
-          </div>
-          <div class="section__voice--text">
-            <p class="voice--text">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br/>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature3.jpg" alt="フューチャー画像3">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
         </article>
-      </div>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature4.jpg" alt="フューチャー画像4">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature5.jpg" alt="フューチャー画像5">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature6.jpg" alt="フューチャー画像6">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature7.jpg" alt="フューチャー画像7">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature8.jpg" alt="フューチャー画像8">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+        <article class="feature__cards--item">
+            <img class="feature__cards--image" src="./img/feature9.jpg" alt="フューチャー画像9">
+            <div class="cards__item--wrapper">
+                <p class="cards__item--headline">category</p>
+                <p class="cards__item--description">Text text text text text text text text text text text</p>
+                <time class="card__item--time" datetime="xxxx.xx.xx">xxxx.xx.xx</time>
+            </div>
+        </article>
+    </div>
     </section>
 
-    <!-- summary -->
-    <section class="section__summary">
-      <h2 class="section--title">スクールの概要</h2>
-      <div class="summary__wrapper">
-        <ul class="summary__list">
-          <li class="summary__item">
-            <h3 class="summary__list--title">レッスン内容</h3>
-            <p class="summary__list--sub-title">LESSON</p>
-            <p class="summary__item--text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </li>
-          <li class="summary__item">
-            <h3 class="summary__list--title">料金プラン</h3>
-            <p class="summary__list--sub-title">PRICE</p>
-            <p class="summary__item--text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </li>
-          <li class="summary__item">
-            <h3 class="summary__list--title">講師のご紹介</h3>
-            <p class="summary__list--sub-title">TEACHER</p>
-            <p class="summary__item--text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </li>
-          <li class="summary__item">
-            <h3 class="summary__list--title">BBBのQ&A</h3>
-            <p class="summary__list--sub-title">Q&A</p>
-            <p class="summary__item--text">テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-          </li>
-        </ul>
-      </div>
+    <!-- section contact -->
+    <section class="section__contact" id="contact">
+    <h2 class="section__title">CONTACT</h2>
+    <div class="section__contact--contents">
+        <div class="contact__info">
+            <p class="contact__info--text">テキストテキストテキスト</p>
+            <p class="contact__info--text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p class="contact__info--text">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+        <div class="contact__form">
+            <form action="">
+                <dl>
+                    <dt>
+                        <label for="name">Name:</label>
+                    </dt>
+                    <dd>
+                        <input type="text" id="name" name="your-name">
+                    </dd>
+                    <dt>
+                        <label for="email">Mail:</label>
+                    </dt>
+                    <dd>
+                        <input type="email" id="email" name="your-email">
+                    </dd>
+                    <dt>
+                        <label for="message">Message:</label>
+                    </dt>
+                    <dd>
+                        <textarea name="your-message" id="message"></textarea>
+                    </dd>
+                </dl>
+                <div class="button">
+                    <input type="submit" value="SEND">
+                </div>
+            </form>
+        </div>
+    </div>
     </section>
 
-    <!-- contact -->
-    <section class="section__contact">
-      <div class="contact__wrapper">
-        <h2 class="section--contact--title">まずは無料で、BBBの英会話を試してみませんか？</h2>
-        <p class="section__sub-title">今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント!</p>
-        <a href="#" class="contact--button">無料体験に申し込む</a>
-      </div>
-    </section>
-
-    <!-- footer -->
+    <!-- フッター -->
     <footer class="footer">
-      <ul class="footer__wrapper">
-        <li class="footer__list">
-          <p class="footer__list--title">コース一覧</p>
-          <ul class="footer__list--menu">
-            <li class="footer__list--item"><a href="#">スタンダードプラン</a></li>
-            <li class="footer__list--item"><a href="#">プレミアムプラン</a></li>
-            <li class="footer__list--item"><a href="#">短期集中プラン</a></li>
-            <li class="footer__list--item"><a href="#">日常英会話コース</a></li>
-            <li class="footer__list--item"><a href="#">ビジネス英会話コース</a></li>
-          </ul>
-        </li>
-        <li class="footer__list">
-          <p class="footer__list--title">講師紹介</p>
-          <ul class="footer__list--menu">
-            <li class="footer__list--item"><a href="#">講師について</a></li>
-            <li class="footer__list--item"><a href="#">講師一覧</a></li>
-            <li class="footer__list--item"><a href="#">講師を探す</a></li>
-          </ul>
-        </li>
-        <li class="footer__list">
-          <p class="footer__list--title">会社情報</p>
-          <ul class="footer__list--menu">
-            <li class="footer__list--item"><a href="#">会社概要</a></li>
-            <li class="footer__list--item"><a href="#">採用情報</a></li>
-          </ul>
-        </li>
-        <li class="footer__list">
-          <p class="footer__list--title">BBBについて</p>
-          <ul class="footer__list--menu">
-            <li class="footer__list--item"><a href="#">よくあるご質問</a></li>
-            <li class="footer__list--item"><a href="#">ご利用規約</a></li>
-            <li class="footer__list--item"><a href="#">プライバシーポリシー</a></li>
-            <li class="footer__list--item"><a href="#">お問い合わせ</a></li>
-          </ul>
-        </li>
-      </ul>
-      <p class="copyright">&copy; BBB English School</p>
+        <p>&copy; Sneakers</p>
     </footer>
 
-
-  </main> 
+</main>
 
 <!-- JavaScript -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
